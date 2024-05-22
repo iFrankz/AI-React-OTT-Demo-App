@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.arrow-button {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.rail:hover .arrow-button {
+  display: block;
+}
+
+/* Add or update these styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+
+.arrow-button {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  height: 100%; /* Ensure it covers the height of the rail */
+  color: white;
+  font-size: 2rem;
+}
+
+.rail:hover .arrow-button {
+  display: flex;
+}
+
+.arrow-button.left::before {
+  content: '\2039'; /* Unicode for left arrow */
+}
+
+.arrow-button.right::before {
+  content: '\203A'; /* Unicode for right arrow */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .text-white {
+  position: relative;
+  z-index: 10;
+}
+
+.hero .bg-black {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  z-index: 5;
+}

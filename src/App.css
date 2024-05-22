@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.hero-slide {
+  position: relative; /* Ensures the absolute children are positioned relative to this element */
+  background-size: cover; /* Ensures the background image covers the entire slide */
+  background-position: center; /* Centers the background image */
+  height: 600px; /* Adjust based on your design */
+  display: flex; /* Enables flexbox for vertical centering */
+  align-items: center; /* Centers the content vertically */
+}
+
+.hero-slide .bg-black {
+  position: absolute; /* Ensures the overlay covers the entire slide */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5; /* Adjust the overlay opacity for readability */
+}
+
+.hero-slide .hero-text {
+  position: relative; /* Positions the text above the overlay */
+  z-index: 10; /* Ensures the text appears above other elements */
+  text-align: right; /* Aligns the text to the left */
+  padding-left: 4rem; /* Adds space from the left edge, adjust as needed */
+  padding-top: 10rem;
+  max-width: 600px; /* Restricts the text container's width for better readability */
+}
+
+.hero-text h1 {
+  margin-left: 100px;
+}
+
+
+.hero-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust based on your design */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
